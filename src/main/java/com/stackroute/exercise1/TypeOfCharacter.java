@@ -6,14 +6,16 @@ import java.util.Scanner;
 public class TypeOfCharacter {
     public String checkTheTypeOfCharacter(char character)
     {
+        String result="";
         if(character>='A'&&character<='Z')
-            return "Capital letter";
+            result="Capital letter";
         else if(character>='a'&&character<='z')
-            return "Small case letter";
+            result="Small case letter";
         else if(character>='0'&&character<='9')
-            return "A Digit";
+            result="A Digit";
         else
-            return "Special Symbol";
+            result ="Special Symbol";
+        return result;
 
     }
 }

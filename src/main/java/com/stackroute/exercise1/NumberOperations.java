@@ -37,12 +37,14 @@ public class NumberOperations
                 output=output.concat("true");
             else
                 output=output.concat("false");
-            return output;
+
         }
         catch(Exception e)
         {
-            return "format is invalid";
+            output="";
+            output="format is invalid";
         }
+        return output;
 
 
     }

@@ -4,20 +4,22 @@ public class NumberGuess
 {
     public String guessTheTargetNumber(int targetnumber,int[] arr)
     {
+        String result = "u didnt play well";
         for(int i=0;i<arr.length;i++){
             if(arr[i]>=1&&arr[i]<=50) {
-                if (arr[i] > targetnumber)
-                    System.out.println("Number guessed is more then original number");
-                else if (arr[i] < targetnumber)
-                    System.out.println("Number guessed is less than original number");
-                else {
-                    return "Number guessed matches the original number";
+                if (arr[i] == targetnumber){
+
+
+                    result = "";
+                    result = result + "Number guessed matches the original number";
                 }
             }
-            else
-                return "numbers not in range";
+            else {
+                result = "";
+                result = result + "numbers not in range";
+            }
         }
-        return "u didnt play well";
+        return result;
     }
 
 }
