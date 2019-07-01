@@ -6,17 +6,17 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class PatternTest {
-    Pattern p;
+    Pattern pattern;
     @Before
     public void setUp() throws Exception
     {
-        p=new Pattern();
+        pattern=new Pattern();
     }
 
     @After
     public void tearDown() throws Exception
     {
-        p=null;
+        pattern=null;
     }
     @BeforeClass
     public static void setUpBeforeClass()
@@ -29,15 +29,15 @@ public class PatternTest {
         System.out.println("Class deletion");
     }
     @Test
-    public void testPattern()
+    public void givenInputNumberReturnPattern()
     {
-        String pat=p.printingPattern(5);
+        String pat=pattern.printingPattern(5);
         assertEquals("122333444455555",pat);
     }
     @Test
-    public void testNegative()
+    public void givenInputNumberReturnWrongPattern()
     {
-        String pat=p.printingPattern(5);
+        String pat=pattern.printingPattern(5);
         assertNotEquals("122334455555",pat);
     }
 

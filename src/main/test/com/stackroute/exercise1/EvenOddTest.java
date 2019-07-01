@@ -6,15 +6,15 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class EvenOddTest {
-    EvenOdd eo;
+    EvenOdd evenOdd;
     @Before
     public void setUp(){
-        eo=new EvenOdd();
+        evenOdd=new EvenOdd();
     }
 
     @After
     public void tearDown(){
-        eo=null;
+        evenOdd=null;
     }
     @BeforeClass
     public static void setUpBeforeClass()
@@ -27,22 +27,22 @@ public class EvenOddTest {
         System.out.println("Class deletion");
     }
     @Test
-    public void testForEven()
+    public void givenInputEvenNumberShouldReturnJerry()
     {
-        String t=eo.checkWhetherNumberIsEvenOrOdd(22);
+        String t=evenOdd.checkWhetherNumberIsEvenOrOdd(22);
         assertEquals("Jerry",t);
 
     }
     @Test
-    public void testForOdd()
+    public void givenInputEvenNumberShouldReturnTom()
     {
-        String t= eo.checkWhetherNumberIsEvenOrOdd(23);
+        String t= evenOdd.checkWhetherNumberIsEvenOrOdd(23);
         assertEquals("Tom",t);
     }
     @Test
-    public void testNegative()
+    public void givenInputNegativeShouldReturnInputIncorrect()
     {
-        String t=eo.checkWhetherNumberIsEvenOrOdd('@');
+        String t=evenOdd.checkWhetherNumberIsEvenOrOdd('@');
         assertEquals("input incorrect",t);
     }
 }

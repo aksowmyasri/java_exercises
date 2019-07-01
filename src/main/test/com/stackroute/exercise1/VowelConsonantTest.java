@@ -6,16 +6,16 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class VowelConsonantTest {
-    VowelConsonant v;
+    VowelConsonant vowelConsonant;
     @Before
     public void setUp() throws Exception
     {
-        v= new VowelConsonant();
+        vowelConsonant= new VowelConsonant();
     }
 
     @After
     public void tearDown() throws Exception {
-        v=null;
+        vowelConsonant=null;
     }
     @BeforeClass
     public static void setUpBeforeClass()
@@ -28,27 +28,27 @@ public class VowelConsonantTest {
         System.out.println("Class deletion");
     }
     @Test
-    public void checkForVowel()
+    public void givenInputVowelReturnVowel()
     {
-        String actual=v.checkWhetherVowelOrConsonant("a");
+        String actual=vowelConsonant.checkWhetherVowelOrConsonant("a");
         assertEquals("Vowel",actual);
     }
     @Test
-    public void checkForConsonant()
+    public void givenInputConsonantReturnConsonant()
     {
-        String actual=v.checkWhetherVowelOrConsonant("c");
+        String actual=vowelConsonant.checkWhetherVowelOrConsonant("c");
         assertEquals("Consonant",actual);
     }
     @Test
-    public void checkForVowelConsonant()
+    public void givenInputStringReturnSeriesOfVowelOrConsonant()
     {
-        String actual=v.checkWhetherVowelOrConsonant("ab");
+        String actual=vowelConsonant.checkWhetherVowelOrConsonant("ab");
         assertEquals("VowelConsonant",actual);
     }
     @Test
-    public void checkNegative()
+    public void givenInputNUmberReturnNotALetter()
     {
-        String actual=v.checkWhetherVowelOrConsonant("1");
+        String actual=vowelConsonant.checkWhetherVowelOrConsonant("1");
         assertEquals("not a letter",actual);
     }
 }

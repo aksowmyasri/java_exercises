@@ -7,15 +7,15 @@ import static org.junit.Assert.*;
 
 public class NumberGuessTest
 {
-    NumberGuess ng;
+    NumberGuess numberGuess;
     @Before
     public void setUp()  {
-        ng = new NumberGuess();
+        numberGuess = new NumberGuess();
     }
 
     @After
     public void tearDown() {
-        ng=null;
+        numberGuess=null;
     }
     @BeforeClass
     public static void setUpBeforeClass()
@@ -28,13 +28,13 @@ public class NumberGuessTest
         System.out.println("Class deletion");
     }
     @Test
-    public void testNumberGuess(){
-        String str=ng.guessTheTargetNumber(34,new int[]{23,45,34});
+    public void givenInputCorrectReturnNumberGuessMatches(){
+        String str=numberGuess.guessTheTargetNumber(34,new int[]{23,45,34});
         assertEquals("Number guessed matches the original number",str);
     }
     @Test
-    public void testNegativeNumberGuess(){
-        String str=ng.guessTheTargetNumber(34,new int[]{23,45,33});
+    public void givenWrongInputReturnUDidnotPlayWell(){
+        String str=numberGuess.guessTheTargetNumber(34,new int[]{23,45,33});
         assertEquals("u didnt play well",str);
     }
 

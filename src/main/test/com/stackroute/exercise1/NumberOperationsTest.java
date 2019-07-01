@@ -6,16 +6,16 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class NumberOperationsTest {
-    NumberOperations op;
+    NumberOperations numberOperations;
 
     @Before
     public void setUp() throws Exception {
-        op = new NumberOperations();
+        numberOperations = new NumberOperations();
     }
 
     @After
     public void tearDown() throws Exception {
-        op = null;
+        numberOperations = null;
     }
 
     @BeforeClass
@@ -29,15 +29,21 @@ public class NumberOperationsTest {
     }
 
     @Test
-    public void testfunction() {
-        String str = op.sortDecreasingOrderAndPrintSumOfEvenNumbers("3421");
+    public void givenInputNumberReturnDecreasingOrderAndSumOfEvenNumbersAndCheckSumGreaterThan15() {
+        String str = numberOperations.sortDecreasingOrderAndPrintSumOfEvenNumbers("3421");
         assertEquals("4321 6 false", str);
 
     }
     @Test
-    public void testformat() {
-        String str = op.sortDecreasingOrderAndPrintSumOfEvenNumbers("a345");
+    public void givenInputStringReturnWrongFormat() {
+        String str = numberOperations.sortDecreasingOrderAndPrintSumOfEvenNumbers("a345");
         assertEquals("format is invalid", str);
 
     }
+    @Test
+    public void givenInputNullReturnWrongFormat(){
+        String str = numberOperations.sortDecreasingOrderAndPrintSumOfEvenNumbers("");
+        assertEquals("format is invalid",str);
+    }
+
 }

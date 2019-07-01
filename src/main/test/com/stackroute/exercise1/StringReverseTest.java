@@ -6,17 +6,17 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class StringReverseTest {
-    StringReverse sr;
+    StringReverse stringReverse;
     @Before
     public void setUp() throws Exception
     {
-        sr= new StringReverse();
+        stringReverse= new StringReverse();
     }
 
     @After
     public void tearDown() throws Exception
     {
-        sr=null;
+        stringReverse=null;
     }
     @BeforeClass
     public static void setUpBeforeClass()
@@ -29,15 +29,15 @@ public class StringReverseTest {
         System.out.println("Class deletion");
     }
     @Test
-    public void testReverse()
+    public void givenInputStringReturnReverseOfTheString()
     {
-        String rev=sr.stringReverseWithoutStringBuffer("sowmya");
+        String rev=stringReverse.stringReverseWithoutStringBuffer("sowmya");
         assertEquals("aymwos",rev);
     }
     @Test
-    public void testNegative()
+    public void givenInputStringReturnWrongReverse()
     {
-        String rev=sr.stringReverseWithoutStringBuffer("sowmya");
+        String rev=stringReverse.stringReverseWithoutStringBuffer("sowmya");
         assertNotEquals("hjgfjh",rev);
     }
 

@@ -5,14 +5,16 @@ package main.java.com.stackroute.exercise1;
 public class EvenOdd {
     public String checkWhetherNumberIsEvenOrOdd(int input)
         {
-
+            String result="";
             if(input>20 && input<30) {
                 if (input % 2 == 0)
-                    return "Jerry";
+                    result="Jerry";
                 else
-                    return "Tom";
-            }
+                    result="Tom";
 
-                return "input incorrect";
+            }
+            else
+                result = "input incorrect";
+            return result;
     }
 }

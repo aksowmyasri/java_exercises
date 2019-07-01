@@ -34,9 +34,10 @@ public class NumberOperations
             output = output.concat(add);
             output = output.concat(" ");
             if (sum > 15)
-                return output.concat("true");
+                output=output.concat("true");
             else
-                return output.concat("false");
+                output=output.concat("false");
+            return output;
         }
         catch(Exception e)
         {

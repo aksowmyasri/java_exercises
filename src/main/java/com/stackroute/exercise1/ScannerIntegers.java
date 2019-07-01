@@ -1,6 +1,5 @@
 package main.java.com.stackroute.exercise1;
 
-import java.util.Scanner;
 
 //Scans and prints the sum of unspecified scanner inputs
 public class ScannerIntegers {

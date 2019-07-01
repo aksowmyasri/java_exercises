@@ -6,15 +6,15 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class PalindromeTest {
-    Palindrome p;
+    Palindrome palindrome;
     @Before
     public void setUp()  {
-    p=new Palindrome();
+    palindrome=new Palindrome();
     }
 
     @After
     public void tearDown() {
-        p=null;
+        palindrome=null;
     }
     @BeforeClass
     public static void setUpBeforeClass()
@@ -29,29 +29,29 @@ public class PalindromeTest {
     @Test
     public void testForPalindromeGreaterThan25()
     {
-        String expected=p.checkForPalindrome("8888");
+        String expected=palindrome.checkForPalindrome("8888");
         assertEquals("8888 is palindrome and the sum of even numbers is greater than 25",expected);
 
     }
     @Test
-    public void testForPalindromeLessThan25()
+    public void inputNumberReturnPalindromeLessThan25()
     {
-        String expected=p.checkForPalindrome("121");
+        String expected=palindrome.checkForPalindrome("121");
         assertEquals("121 is palindrome and the sum of even numbers is less than 25",expected);
 
     }
     @Test
-    public void testForNotPalindrome()
+    public void inputNummberReturnNotPalindrome()
     {
-        String expected=p.checkForPalindrome("14521");
+        String expected=palindrome.checkForPalindrome("14521");
         assertEquals("14521 is not a palindrome",expected);
 
     }
 
     @Test
-    public void testForFormat()
+    public void inputStringReturnInvalidInput()
     {
-        String expected=p.checkForPalindrome("abc5");
+        String expected=palindrome.checkForPalindrome("abc5");
         assertEquals("invalid input",expected);
 
     }

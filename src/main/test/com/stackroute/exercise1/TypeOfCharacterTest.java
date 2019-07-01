@@ -6,17 +6,17 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class TypeOfCharacterTest {
-    TypeOfCharacter to;
+    TypeOfCharacter typeOfCharacter;
     @Before
     public void setUp() throws Exception
     {
-        to=new TypeOfCharacter();
+        typeOfCharacter=new TypeOfCharacter();
     }
 
     @After
     public void tearDown() throws Exception
     {
-        to = null;
+        typeOfCharacter= null;
     }
     @BeforeClass
     public static void setUpBeforeClass()
@@ -29,27 +29,27 @@ public class TypeOfCharacterTest {
         System.out.println("Class deletion");
     }
     @Test
-    public void testCaptial()
+    public void givenInputCapitalLetterReturnCapitalLetter()
     {
-       String c= to.checkTheTypeOfCharacter('A');
+       String c= typeOfCharacter.checkTheTypeOfCharacter('A');
        assertEquals("Capital letter",c);
     }
     @Test
-    public void testLowerCase()
+    public void givenInputLowerCaseLetterReturnSmallCaseLetter()
     {
-        String c= to.checkTheTypeOfCharacter('a');
+        String c= typeOfCharacter.checkTheTypeOfCharacter('a');
         assertEquals("Small case letter",c);
     }
     @Test
-    public void testDigit()
+    public void givenInputDigitReturnDigit()
     {
-        String c= to.checkTheTypeOfCharacter('1');
+        String c= typeOfCharacter.checkTheTypeOfCharacter('1');
         assertEquals("A Digit",c);
     }
     @Test
-    public void testSymbol()
+    public void givenInputSpecialSymbolReturnSpecialSymbol()
     {
-        String c= to.checkTheTypeOfCharacter('#');
-        assertEquals("Special symbol",c);
+        String c= typeOfCharacter.checkTheTypeOfCharacter('#');
+        assertEquals("Special Symbol",c);
     }
 }

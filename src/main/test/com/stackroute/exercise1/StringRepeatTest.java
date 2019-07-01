@@ -6,17 +6,17 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class StringRepeatTest {
-    StringRepeat sr;
+    StringRepeat stringRepeat;
     @Before
     public void setUp() throws Exception
     {
-        sr=new StringRepeat();
+        stringRepeat=new StringRepeat();
     }
 
     @After
     public void tearDown() throws Exception
     {
-        sr=null;
+        stringRepeat=null;
     }
     @BeforeClass
     public static void setUpBeforeClass()
@@ -29,15 +29,15 @@ public class StringRepeatTest {
         System.out.println("Class deletion");
     }
     @Test
-    public void testRepeat()
+    public void givenInputStringReturnRepeatedString()
     {
-        String output=sr.toRepeatLastNCharactersOfTheString("stackroute",2);
+        String output=stringRepeat.toRepeatLastNCharactersOfTheString("stackroute",2);
         assertEquals("stackroutetete",output);
     }
     @Test
-    public void testNegative()
+    public void givenIputStringReturnWrongString()
     {
-        String output=sr.toRepeatLastNCharactersOfTheString("stackroute",2);
+        String output=stringRepeat.toRepeatLastNCharactersOfTheString("stackroute",2);
         assertNotEquals("stackroutee",output);
     }
 
